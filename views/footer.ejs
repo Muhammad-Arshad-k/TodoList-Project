@@ -2,4 +2,11 @@
 <footer>
   Copyright 2022 The wonderstories🌏
 </footer>
+<script>
+function deleteItem(itemId) {
+  fetch(`/delete/${itemId}`, { method: 'POST' })
+    .then(() => window.location.reload()) // reload the page after deleting the item
+    .catch(console.error);
+}
+</script>
 </html>
